@@ -1,0 +1,21 @@
+1. Topic N/A for midterm.
+
+2. In the happy case, 2r. Make client the coordinator, take one delay to send propose message to all participants, another delay to gather all responses.  If timeouts occur and there's retransmission going on, then the answer is a bit more complicated.  Think about how you'd describe that situation concisely. 
+
+3. See lecture notes, which answer this question directly.
+
+4. ... doesn't exist  :)
+
+5. No, he must include himself.  {A, B} must decide by themselves whether or not to add X to their group. This is because both A and B *need* to know that X will be part of the group.  Think of a counterexample.
+
+6. No, it's a really bad idea. One wonderful property of the original Paxos is that the system doesn't need to block when just one machine goes down. But Ben's protocol can block upon one node's failure.  Think of an example of this.
+
+7. Technically correct, but a bad idea.  Think about implications.
+
+8. See lecture notes, which answer this question directly.
+
+9. Topic N/A for midterm.
+
+10. We haven't covered Amazon or sequential consistency yet. But please think of this question in the context of Paxos. Find an example for why having a consistent view of who belongs to a group is essential for Paxos's correctness.
+
+11, 12. Hint for these open-ended questions: think about the two schema-design-related techniques we discussed in Bigtable -- manipulating row keys for locality and aggressive denormalization -- and reason about how you would use these techniques to optimize operations likely to be important in a service like Twitter.  Take cue from the discussion of the Web Search operations and the Webtable schema design, both discussed in class.
